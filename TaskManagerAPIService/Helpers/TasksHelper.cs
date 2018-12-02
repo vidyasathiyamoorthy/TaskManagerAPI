@@ -136,10 +136,10 @@ namespace TaskManagerAPIService.Helpers
         public void DeleteTask(int tskid)
         {
             var tsk = db.Tasks.Where(tt => tt.TaskID == tskid).Single();
-            //var parentTskID = db.Tasks.Where(t => t.TaskID == tskid).Select(u => u.ParentID).Single();
-            //var parentTsk = db.ParentTasks.Where(pt => pt.ParentID == tsk.ParentID).Single();
+            
+            
             db.Tasks.Remove(tsk);
-            //db.ParentTasks.Remove(parentTsk);
+            
             db.SaveChanges();          
         }
     }

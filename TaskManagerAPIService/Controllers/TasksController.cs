@@ -119,6 +119,8 @@ namespace TaskManagerAPIService.Controllers
 
         [HttpDelete]
         [Route("api/tasks/delete/{tskid}")]
+        /// region start
+        /// region end
         public IHttpActionResult DeleteTask(int tskid)
         {
             db.DeleteTask(tskid);
